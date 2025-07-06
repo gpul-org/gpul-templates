@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="gpul-school.css">
+</head>
+
+<style>
+body {
+    font-family: sans-serif;
+}
+
+.background {
+    background: linear-gradient(#0cc, #0c7);
+    padding-bottom: 0.5em;
+}
+p {
+    margin: 0;
+    padding: 0.25em;
+    line-height: 1;
+}
+.website {
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    font-size: 2em;
+    padding-top: 10px;
+}
+#talk-title {
+    font-size: 3em;
+    font-weight: 700;
+    padding: 0;
+    padding-top: 0.5em;
+    padding-bottom: 0;
+    text-align: center;
+}
+.sign-container {
+    padding: 0.3em;
+    background: white;
+    margin: 2em;
+    margin-top: 0.4em;
+    border-radius: 2em;
+
+}
+#talk-logo {
+    width: 8em;
+    margin: 1em;
+    grid-column: 1;
+}
+#gpul-logo {
+    width: 8em;
+    margin:1em;
+    grid-column: 3;
+}
+#banner-container {
+    display:grid;
+    grid-template-columns: 3;
+}
+.time-and-place {
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+}
+.description {
+    font-weight: bold;
+    font-size: 1.7em;
+    text-align: center;
+}
+
+.follow-us{
+    text-align: center;
+    font-size:1.3em;
+    padding:0.7em;
+}
+</style>
+<body>
+    <div class="background">
+        <p class="website">school.gpul.org</p>
+        <div class="sign-container">
+            <div id="banner-container">
+                <img id="talk-logo" src="talk-logo.png" alt="" srcset="">
+                <p id="talk-title"><%= talk.title %></p>
+                <img id="gpul-logo" src="gpul.png" alt="" srcset="">
+            </div>
+            <p class="time-and-place">
+                <%= talk.date %> <%= talk.startTime %> a <%= talk.endTime %><br>
+                Aula <%= talk.classroom %> - <%= talk.building %>
+            </p>
+            <p class="description">
+                <%= talk.description %>
+            </p>
+            <p class="follow-us">Síguenos en redes sociales: <strong>@gpul_</strong></p>
+        </div>
+    </div>
+</body>
+
+</html>
